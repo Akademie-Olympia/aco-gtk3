@@ -1,25 +1,28 @@
-# GTK3 configuration
+# GTK 3 configuration
 
-GTK3-Einstellungen und CSS für die Desktop-Anwendungen.
+GTK 3 settings and CSS for desktop applications.
 
-**[Dokumentation](https://aco-arch-dotfiles.readthedocs.io/en/latest/components/#gtk3)** ·
-[Installation und Updates](https://aco-arch-dotfiles.readthedocs.io/en/latest/arch-package/)
+**[Documentation](https://aco-docs.readthedocs.io/en/latest/gtk3/)** ·
+[Guide](https://aco-docs.readthedocs.io/en/latest/gtk3/guide/) ·
+[Design & dependencies](https://aco-docs.readthedocs.io/en/latest/gtk3/design/) ·
+[Installation and updates](https://aco-arch-dotfiles.readthedocs.io/en/latest/arch-package/)
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Akademie-Olympia/aco-arch-dotfiles/main/install.sh | bash -s -- gtk-3.0
 ```
 
-Paket: `aco-arch-dotfiles-gtk-3.0`. Dateien: `~/.config/gtk-3.0/settings.ini` und `gtk.css`.
-Quellen und `packaging/arch/PKGBUILD` werden hier gepflegt. Nach Push auf `main`
-und erfolgreichem Registry-Build aktualisiert `sudo pacman -Syu` das Paket.
-Entwicklung und Builds: [PACKAGING.md](PACKAGING.md).
+Package: `aco-arch-dotfiles-gtk-3.0`. This standalone repository holds the development sources and the package recipe in
+`packaging/arch/PKGBUILD`. The documentation of this component lives in the shared
+[aco-docs](https://github.com/Akademie-Olympia/aco-docs) repository (one Read the Docs project for all small components).
+Push to `main`; after a successful registry build update with `sudo pacman -Syu`. Details and local builds: [PACKAGING.md](PACKAGING.md).
 
-### Anpassung
+### Customisation
 
-`settings.ini` enthält die GTK3-Einstellungen; `gtk.css` ergänzt eigene Stilregeln. Betroffene GTK3-Anwendungen nach Änderungen neu starten. GTK4 verwendet eine getrennte Konfiguration.
+`settings.ini` holds the GTK 3 settings; `gtk.css` adds the style rules. Restart affected GTK 3 applications after changes. GTK 4 uses a separate configuration.
 
-Eigene Änderungen in der aktivierten Benutzerkopie bleiben bei der Synchronisierung erhalten; neue abweichende Vorgaben erscheinen als `.pacnew`. Siehe [Update und Wiederherstellung](https://aco-arch-dotfiles.readthedocs.io/en/latest/verification/).
+Your own changes in the activated user copy survive synchronisation; new differing defaults appear as `.pacnew`.
+See [update and recovery](https://aco-arch-dotfiles.readthedocs.io/en/latest/verification/).
 
 [![Package safety](https://github.com/Akademie-Olympia/aco-gtk3/actions/workflows/package.yml/badge.svg)](https://github.com/Akademie-Olympia/aco-gtk3/actions/workflows/package.yml)
 
-[MIT-Lizenz](LICENSE).
+[MIT licence](LICENSE).
